@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+     <div class="container">
+        <h2>Pemesanan Bahan Ajar SITTA UT</h2>
+
+        <form id="formPemesanan">
+            <div class="input-group">
+                <label>NIM:</label>
+                <input type="text" id="nim" required placeholder="Masukkan NIM">
+                <span id="errNim" class="error"></span>
+            </div>
+            <div class="input-group">
+                <label>Nama:</label>
+                <input type="text" id="nama" required placeholder="Nama Lengkap">
+            </div>
+            <div class="input-group">
+                <label>Pilih Mata Kuliah:</label>
+                <select id="matkul">
+                    <option value="Pengantar Bisnis">Pengantar Bisnis (Rp 75.000)</option>
+                    <option value="Matematika Ekonomi">Matematika Ekonomi (Rp 90.000)</option>
+                    <option value="Statistika Sosial">Statistika Sosial (Rp 85.000)</option>
+                </select>
+            </div>
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+
+        <h3>Daftar Pesanan</h3>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Mata Kuliah</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tabelData">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modalAlert" class="modal">
+        <div class="modal-content">
+            <p id="modalPesan"></p>
+            <button onclick="tutupModal()">OK</button>
+        </div>
+    </div>
+
+    
+</body>
+<script src="script.js"></script>
+</html>
